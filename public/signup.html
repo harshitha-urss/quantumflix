@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up - QuantumFlix</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <main class="glass-card">
+      <h1>Create your QuantumFlix account</h1>
+      <p class="subtitle">Sign up to start exploring movies.</p>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="userId">User ID</label>
+          <input id="userId" name="userId" type="text" placeholder="unique username" required />
+        </div>
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Create account</button>
+      </form>
+
+      <div id="signup-status" class="status"></div>
+
+      <div class="link-row">
+        Already have an account?
+        <a href="/login.html">Go to login</a>
+      </div>
+    </main>
+
+    <script src="/js/signup.js"></script>
+  </body>
+  </html>
+

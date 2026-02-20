@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - QuantumFlix</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <main class="page-center">
+      <div class="brand-logo">QUANTUMFLIX</div>
+
+      <section class="glass-card">
+        <h1>Login to QuantumFlix</h1>
+        <p class="subtitle">Enter your details to continue watching.</p>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" required />
+          </div>
+
+          <button type="submit" class="btn-primary">Log in</button>
+        </form>
+
+        <div id="login-status" class="status"></div>
+
+        <div class="link-row">
+          New here?
+          <a href="/signup.html">Create an account</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/login.js"></script>
+  </body>
+  </html>
+

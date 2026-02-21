@@ -1,7 +1,5 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const crypto = require('crypto');
-const nodemailer = require('nodemailer');
 const axios = require('axios');
 const { getPool } = require('../db');
 
@@ -41,30 +39,18 @@ router.post('/signup', async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-    const verificationToken = crypto.randomBytes(32).toString('hex');
 
     const [result] = await pool.execute(
-      `INSERT INTO users (userId, fullName, email, phone, password, verificationToken)
+      `INSERT INTO users (userId, fullName, email, phone, password, isVerified)
        VALUES (?, ?, ?, ?, ?, ?)`,
-      [userId, fullName, email, phone, hashedPassword, verificationToken]
+      [userId, fullName, email, phone, hashedPassword, true]
     );
 
-    const verifyUrl = `http://localhost:${process.env.PORT || 5000}/verify?token=${verificationToken}`;
-
-    const transporter = createTransporter();
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: 'Verify your QuantumFlix account',
-      html: `<p>Hello ${fullName},</p>
-             <p>Thank you for signing up to <strong>QuantumFlix</strong>. Please verify your email by clicking the link below:</p>
-             <p><a href="${verifyUrl}">Verify your account</a></p>`,
-    });
-
     return res.status(201).json({
-      message: 'Signup successful. Please check your email to verify your account.',
+      message: 'Signup successful.',
       userId: result.insertId,
     });
+
   } catch (error) {
     console.error('Signup error:', error);
     return res.status(500).json({ message: 'Internal server error.' });
@@ -95,10 +81,6 @@ router.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ message: 'Invalid email or password.' });
-    }
-
-    if (!user.isVerified) {
-      return res.status(403).json({ message: 'Please verify your email before logging in.' });
     }
 
     return res.status(200).json({

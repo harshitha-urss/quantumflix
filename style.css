@@ -1,100 +1,77 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-    text-align: center;
+margin: 0;
+font-family: Arial, sans-serif;
+background: black;
+color: white;
+text-align: center;
 }
 
 .hero {
-    padding: 90px 20px;
-    background: linear-gradient(to right, #00f2ff, #00ff9d);
-    color: black;
+padding: 90px 20px;
+background: linear-gradient(to right, #00f2ff, #00ff9d);
+color: black;
 }
 
 .hero h1 {
-    font-size: 42px;
+font-size: 42px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin: 15px 0;
+font-size: 18px;
+margin: 15px 0;
 }
 
 section {
-    padding: 60px 20px;
+padding: 60px 20px;
 }
 
 h2 {
-    color: cyan;
-    margin-bottom: 20px;
+color: cyan;
+margin-bottom: 20px;
 }
 
 .image-box {
-    width: 70%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px cyan;
-    margin: 20px auto;
-    display: block;
-}
-
-.architecture-img {
-    width: 60%;
-}
-
-.video-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.video-box iframe {
-    width: 720px;
-    height: 405px;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 0 20px cyan;
+width: 70%;
+max-width: 800px;
+border-radius: 12px;
+box-shadow: 0 0 20px cyan;
+margin: 20px auto;
+display: block;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+list-style: none;
+padding: 0;
 }
 
 ul li {
-    padding: 10px;
+padding: 10px;
 }
 
 .tech {
-    font-size: 18px;
-    color: yellow;
+font-size: 18px;
+color: yellow;
 }
 
 .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 25px;
-    background: cyan;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+display: inline-block;
+margin: 10px;
+padding: 12px 25px;
+background: cyan;
+color: black;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.source-btn {
+background-color: #0a1aff;
+color: white;
+border: 2px solid white;
 }
 
 footer {
-    padding: 25px;
-    background: #111;
-    margin-top: 40px;
-}
-
-/* Force Dark Blue Source Code Button */
-.source-btn {
-    background-color: #0a1aff !important;   /* DARK BLUE */
-    color: white !important;
-    border: 2px solid white;
-}
-
-.source-btn:hover {
-    background-color: #0000cc !important;
+padding: 25px;
+background: #111;
+margin-top: 40px;
 }

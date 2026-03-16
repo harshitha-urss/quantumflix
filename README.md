@@ -120,23 +120,23 @@ The platform provides fast and relevant movie recommendations through an interac
 
 ## Repository Structure
 
-quantumflix/
-│
-├── assets/
-│   ├── interface.jpeg
-│   ├── login_page.jpeg
-│   ├── registration_page.jpeg
-│
-├── public/
-├── routes/
-│
-├── architecture.png
-├── db.js
-├── index.html
-├── style.css
-├── script.js
-│
-└── README.md
+    quantumflix/
+    │
+    ├── assets/
+    │   ├── interface.jpeg
+    │   ├── login_page.jpeg
+    │   ├── registration_page.jpeg
+    │
+    ├── public/
+    ├── routes/
+    │
+    ├── architecture.png
+    ├── db.js
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    │
+    └── README.md
 
 ---
 
